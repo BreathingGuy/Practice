@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    font-size: 16px;
+    padding: 60px 30px 0 30px;
+}
+
+/* SECTION */
+.section-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    place-items: center;
+}
+
+/* info */
+.titles {
+    margin-bottom: 20px;
+}
+.titles h1 {
+    margin-bottom: 7px;
+}
+
+.gift-info .text {
+    margin-bottom: 20px;
+    color: #868080;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+/* time containers */
+.boxes {
+    display: flex;
+    gap: 20px;
+}
+
+.boxes span {
+    text-transform: uppercase;
+}
+
+.dedline-format {
+    width: 65px;
+    height: 65px;
+    background-color: rgb(37, 37, 102);
+
+    color: white;
+    text-align: center;
+
+    display: grid;
+    place-items: center;
+}
+
+h4 {
+    font-size: 25px;
+}

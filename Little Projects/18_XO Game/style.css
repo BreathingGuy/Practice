@@ -1,0 +1,121 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    background: ghostwhite;
+
+    color: dimgray;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;;
+}
+
+/* CONTAINER
+============ */
+.container {
+    margin: 5% auto;
+
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+/* BOX
+====== */
+
+.box {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+
+    border: 1px solid gray;
+}
+
+span {
+    margin: 5px;
+    margin-left: -35px;
+    padding: 0;
+    width: 75px;
+    height: 75px;
+
+    position: absolute;
+
+    font-size: 75px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.top {
+    border-top: none;
+}
+
+.left {
+    border-left: none;
+}
+
+.bottom {
+    border-bottom: none;
+}
+
+.right {
+    border-right: none;
+}
+
+.alert {
+    height: 75px;
+    width: 75px;
+    margin-top: -50%;
+    box-sizing: content-box;
+    padding: 30px;
+
+    background: ghostwhite;
+    border-radius: 20px;
+    box-shadow: 0 0 75px 2px dimgray;
+
+    display: inline-block;
+    position: relative;
+    bottom: 50px;
+    top: 0;
+    z-index: 10;
+
+    animation: larger 0.5s;
+    animation-fill-mode: forwards;
+}
+
+button {
+    background: dimgray;
+    color: ghostwhite;
+
+    border-radius: 2px;
+    border: none;
+    outline: none;
+}
+
+button:focus {
+    background: silver;
+}
+
+.activeBox {
+    background: silver;
+}
+
+@keyframes larger {
+    from{
+        width: 125px;
+        height: 75px;
+    }
+
+    to{
+        height: 100px;
+        width: 250px;
+    }
+}

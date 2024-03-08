@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+$theme-color: #0037ff;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// BODY
+body {
+    min-height: 100vh;
+    padding: 1.5rem;
+
+    font-family: 'Poppins', sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:after {
+        content: '';
+        height: 100vh;
+        width: 60%;
+        inset: 0;
+
+        background-color: $theme-color;
+        clip-path: polygon(0 100%, 0 0, 100% 0, 70% 100%);
+
+        position: fixed;
+        z-index: -1;
+
+    }
+}
+
+// LOGIN CARD
+.login-card {
+    width: 1200px;
+
+    background-color: white;
+    box-shadow: 0 10px 50px -30px black;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: auto auto;
+
+    a {
+        text-decoration: none;
+        color: $theme-color;
+    }
+
+    // COLUMN
+    .column {
+        padding: 4rem;
+
+        &:last-child {
+            background: url('bg.jpg') center;
+            background-size: cover;
+
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            gap: 40px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+
+                background: linear-gradient(90deg, white, #ffffff82);
+            }
+
+            * {
+                z-index: 1;
+            }
+
+            a {
+                display: inline-block;
+                padding: 12px 30px;
+
+                color: black;
+                font-size: 16px;
+                font-weight: 600;
+
+                border: 2px solid $theme-color;
+                border-radius: 50px;
+
+                cursor: pointer;
+                transition: all .3s;
+
+                &:hover {
+                    background-color: $theme-color;
+                    color: white;
+                }
+            }
+        }
+    } // column
+
+    h1 {
+        margin-bottom: 1rem;
+    }
+
+    .form-element {
+        width: 100%;
+        padding: 20px 30px;
+
+        border: none;
+        border-radius: 50px;
+        background-color: #f1f1f1;
+
+        font-size: 18px;
+
+        transition: box-shadow .2s;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px $theme-color;
+        }
+    }
+
+    input[type=checkbox] {
+        accent-color: $theme-color;
+        width: 16px;
+        height: 16px;
+    }
+
+    // FORM
+    form {
+        margin-top: 3rem;
+
+        &>* {
+            margin-top: 1rem;
+        }
+
+        button {
+            padding: 20px 40px;
+
+            background-color: $theme-color;
+            
+            color: white;
+            font-weight: 600;
+            font-size: 18px;
+
+            border-radius: 50px;
+            border: none;
+
+            cursor: pointer;
+            transition: all .2s;
+
+            &:active {
+                scale: .95;
+                background-color: darken($color: $theme-color, $amount: 10%);
+            }
+        }
+
+        .form-checkbox-item {
+            display: flex;
+            align-items: center;
+
+            gap: .7rem;
+            margin-left: 5px;
+        }
+
+    } //form
+
+} //login-card
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 1rem;
+
+    a {
+        width: 50px;
+        height: 50px;
+
+        border-radius: 50px;
+        font-size: 20px;
+        color: white;
+
+        background-color: green;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: scale .2s;
+
+        &.facebook {
+            background-color: #3b5998;
+        }
+
+        &.twitter {
+            background-color: #55acee;
+        }
+
+        &.github {
+            background-color: #111;
+        }
+
+        &:hover {
+            scale: .95;
+        }
+    }
+}
+
+// Responsive 
+
+@media (max-width: 992px) {
+    .login-card {
+        width: 500px;
+        text-align: center;
+        display: block;
+
+        .column {
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+
+    .flex {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .social-buttons {
+        justify-content: center;
+    }
+}

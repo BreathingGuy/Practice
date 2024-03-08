@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e7e5e5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    box-shadow: 0 0 20px -10px black;
+}
+
+
+
+/* HEADER */
+header {
+    width: 100%;
+
+    padding: 20px 15px;
+
+    background-color: white;
+    
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header h1 {
+    text-shadow: 2px 3px 2px rgb(206, 204, 204);
+}
+
+header h1 span {
+    color: rgb(59, 133, 245);
+}
+
+
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.buttons button {
+    background-color: transparent;
+    border: none;
+
+    letter-spacing: 2px;
+    font-size: 16px;
+
+    cursor: pointer;
+    transition: color .2s linear;
+}
+
+.buttons button:hover {
+    color: rgb(59, 133, 245);
+}
+
+
+
+/* ICONS */
+.icons {
+    display: flex;
+    gap: 10px;
+
+    cursor: pointer;
+}
+
+.icons i {
+    transition: color .2s linear;
+}
+
+.icons i:hover {
+    color: rgb(59, 133, 245);
+}
+
+.icon {
+    margin-right: 30px;
+    width: 30px;
+    height: 30px;
+
+    display: none;
+
+    background-color: transparent;
+    border: none;
+
+    font-size: 25px;
+    color: rgb(59, 133, 245);
+
+    transition: transform .3s linear, color .2s linear;
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: rgb(34, 87, 167);
+    transform: rotate(90deg);
+}
+/* LINKS */
+.links {
+    width: 100vw;
+    height: 0;
+    overflow: hidden;
+    background-color: white;
+    transition: all .3s linear;
+}
+
+.show-links {
+    height: 10rem;
+}
+
+.links li {
+    padding: 10px 20px;
+    transition: all .3s linear;
+}
+
+.links li:hover {
+    padding-left: 30px;
+    color: rgb(59, 133, 245);
+    background-color: rgba(95, 150, 233, 0.774);
+}
+
+.links li a {
+    display: block;
+
+    letter-spacing: 2px;
+    font-size: 18px;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: black;
+    
+    cursor: pointer;
+}
+
+.links li a:hover {
+    color: rgb(59, 133, 245);
+}
+
+
+
+@media (max-width: 800px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .buttons {
+        display: none;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .icon {
+        display: block;
+    }
+}
+
+@media (min-width: 800px) {
+    .links {
+        display: none;
+    }
+}

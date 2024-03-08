@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
+
+:root {
+    --radius: 15px;
+    --app-width: 600px;
+}
+
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+}
+
+/* BODY */
+body {
+    min-height: 100vh;
+
+    font-family: 'Poppins', sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(217deg, rgba(0, 0, 0, 0.897), rgba(0, 0, 0, 0) 70.71%),
+    linear-gradient(127deg, rgba(255, 0, 106, 0.842), rgba(0, 17, 255, 0) 70.71%),
+    linear-gradient(336deg, rgba(255, 0, 0, 0.842), rgba(0,0,255,0) 70.71%);
+}
+
+/* APP */
+.app {
+    width: var(--app-width);
+    padding: 2rem;
+
+    background-color: #ffffff2d;
+    box-shadow: 0 15px 40px -20px black;
+    color: #ffffffb0;
+
+    border-radius: var(--radius);
+}
+
+.app h1 {
+    margin-bottom: 40px;
+
+    font-size: 28px;
+    font-weight: 800;
+}
+
+/* TODOS */
+.todo-input {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 1rem 1.5rem;
+
+    font-size: 20px;
+    color: azure;
+
+    border: none;
+    border-radius: var(--radius);
+    background-color: #ffffff25;
+}
+
+.todo-input::placeholder {
+    color: #ffffff70;
+}
+
+.todos,
+.completed-todos,
+.uncompleted-todos {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.todo-item {
+    padding: 1rem 1.5rem;
+
+    color: black;
+
+    border-radius: var(--radius);
+    background-color: #f4f4f4bd;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-item span {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.todo-item input[type=checkbox] {
+   width: 20px; 
+   height: 20px;
+
+   accent-color: rgb(170, 21, 150);
+}
+
+.todo-item a {
+    padding: 0;
+    margin: 0;
+
+    color: rgb(170, 21, 150);
+}
+
+.todo-item a i{
+    font-size: 25px;   
+
+    pointer-events: none;
+}
+
+.completed-todos .todo-item {
+    background-color: #5baf5b;
+
+    text-decoration: line-through;
+}
+
+.completed-title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}

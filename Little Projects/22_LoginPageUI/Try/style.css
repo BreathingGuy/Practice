@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+body {
+    padding: 20px;
+
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+body::after {
+    content: "";
+
+    height: 100vh;
+    width: 60%;
+    inset: 0;
+
+    background-color: blue;
+    clip-path: polygon(0 100%, 0 0, 100% 0, 70% 100%);
+
+    position: fixed;
+    z-index: -1;
+}
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+    padding: 50px;
+
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 0 40px -20px black;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+
+    /* display: grid;
+    grid-template-columns: auto auto; */
+}
+
+/* LEFT PART *************** */
+/* *************** */
+/* LOGIN */
+.title {
+    margin-bottom: 10px;
+
+    font-weight: 800;
+}
+
+.text {
+    margin-bottom: 30px;
+}
+
+/* INPUTS */
+.input {
+    width: 100%;
+    flex-grow: 1;
+    flex-basis: auto;
+    margin: 5px 0 10px 0; 
+    padding: 25px;
+    
+    font-size: 15px;
+
+    border: none;
+    background-color: #eee;
+    border-radius: 60px;
+
+    transition: box-shadow .3s;
+}
+
+input::placeholder {
+    font-size: 18px;
+}
+
+.input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px blue;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: blue;
+}
+
+.checkbox {
+    margin: 10px 0 10px;
+}
+
+.inputs label {
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+
+/* SIGN IN BUTTONS */
+.button {
+    margin: 10px 0 30px 0;
+    width: 100%;
+
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 10px;
+}
+
+.sign-in {
+    width: 140px;
+    height: 60px;
+
+    color: #fff;
+    font-weight: 800;
+    font-size: 16px;
+
+    border: none;
+    border-radius: 50px;
+    background-color: blue;
+
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.sign-in:active {
+    scale: .95;
+}
+
+.reset {
+    border: none;
+    background-color: transparent;
+
+    color: blue;
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.reset:hover:after {
+    content: "";
+
+    margin: 3px auto;
+
+    display: block;
+    width: 150px;
+    height: 2px;
+
+    background-color: blue;
+}
+
+
+/* METHODS */
+.icons {
+    margin-top: 40px;
+
+    display: flex;
+    gap: 15px;
+}
+
+.icons i {
+    transition: all .3s;
+}
+
+.fa-2xl {
+    font-size: 50px;
+}
+
+#face {
+    color: rgb(33, 35, 156);
+}
+
+#twit {
+    color: rgb(68, 148, 253);
+
+    margin-left: 10px;
+}
+
+#git {
+    color: black;
+
+    margin-left: 10px;
+}
+
+.icons i:hover {
+    scale: .95;
+}
+
+
+/* RIGHT PART */
+.right-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
